@@ -1,0 +1,29 @@
+[project]
+name = "feeds-r-us"
+version = "0.1.0"
+description = "Threat intelligence and OSINT platform web service"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "sqlalchemy[asyncio]>=2.0",
+    "aiosqlite>=0.19",
+    "asyncpg>=0.29",
+    "httpx>=0.27",
+    "feedparser>=6.0",
+    "python-dateutil>=2.8",
+    "apscheduler>=3.10",
+    "python-jose[cryptography]>=3.3",
+    "pydantic-settings>=2.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
